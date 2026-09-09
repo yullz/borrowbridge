@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BorrowBridge — a lighter library shift</title>
+  <link rel="stylesheet" href="/style.css"><script defer src="/app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the shift desk</a>
+<header><a class="brand" href="/" aria-label="BorrowBridge home"><span class="mark" aria-hidden="true">b↗</span>BorrowBridge</a><span class="library-label">ALDER STREET LIBRARY <span class="pill">Fictional demo</span></span></header>
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div><p class="eyebrow">ONE HANDOVER. A SHIFT THAT'S READY.</p><h1 id="hero-title">Less chasing.<br>More lending.</h1><p class="intro">Let the routine returns and reservations take care of themselves. Leave the next volunteer a clear desk — and just the decisions that need a person.</p></div>
+    <aside class="shift-card"><p class="eyebrow">NEXT SHIFT</p><p class="shift-date">Saturday, 12 September</p><p class="muted">A synthetic afternoon at a community library</p><div class="metrics"><div><strong id="reserved-count">0</strong><span>pickups prepared</span></div><div><strong id="attention-count">0</strong><span>need a person</span></div></div><span class="local-badge">● Local inference · no messages sent</span></aside>
+  </section>
+  <section class="command" aria-label="Prepare the shift">
+    <div><strong id="status-heading">Ready when you are</strong><p id="status-detail">Three handover notes. Four requests. One returned projector.</p></div>
+    <div class="actions"><button class="primary" id="run">Prepare this shift <span aria-hidden="true">↗</span></button><button id="reset" class="quiet">Reset demo</button></div>
+  </section>
+  <p class="message" id="message" role="status" aria-live="polite"></p>
+  <div class="workspace">
+    <section class="panel notes"><div class="panel-heading"><span class="step">01</span><h2>The handover</h2><span class="muted small">SOURCE NOTES</span></div><div id="notes"></div><div class="policy"><strong>The library's rules stay in charge.</strong><p>Oldest requests first. No overlapping bookings. Maintenance holds require staff release. The assistant can prepare a notice, but cannot send it.</p></div></section>
+    <section class="panel results"><div class="panel-heading"><span class="step">02</span><h2>The next shift</h2><span id="revision" class="muted small">REGISTER 0</span></div><div id="requests" aria-label="Requests and current reservation status"></div><a id="download" class="download" href="/api/desk-pack" download>Download the desk pack <span aria-hidden="true">↓</span></a><p class="small muted">A real Markdown checklist and unsent notices, generated from the reservation register.</p></section>
+  </div>
+  <section class="change-card"><div><p class="eyebrow">PLANS CHANGE. THE HANDOVER SHOULD TOO.</p><h2>A sewing pickup is cancelled.</h2><p>Try a second shift: cancel request R-202, then run the assistant again. The released kit can go to the next person in the queue.</p></div><button id="cancel" disabled>Cancel R-202 &amp; reopen the queue</button></section>
+  <section class="panel"><div class="panel-heading"><span class="step">03</span><h2>What actually happened</h2><span class="muted small">VERIFIED REGISTER EVENTS</span></div><ol id="events" class="events"><li>No changes yet. Preparing the shift will create a record here.</li></ol><details><summary>Show the agent's tool calls</summary><ol id="tool-events" class="tool-events"></ol><p class="small muted">This is the tool execution trace, not a claim that every model decision is correct. The register checks every write.</p></details></section>
+  <section class="panel stock"><div class="panel-heading"><h2>At a glance: library stock</h2></div><div class="table-region" role="region" aria-label="Library inventory" tabindex="0"><table><caption>Reservation windows are separate from an item's maintenance or loan status.</caption><thead><tr><th scope="col">Item</th><th scope="col">Storage</th><th scope="col">Stock status</th></tr></thead><tbody id="inventory"></tbody></table></div></section>
+</main>
+<footer><strong>BorrowBridge</strong><p>Prototype using Strands Agents SDK and a model on this computer. All people, notes, items and reservations shown here are fictional. Progress stays in this local demo until reset. No adoption or staff-time savings have been measured.</p></footer>
+</body></html>
