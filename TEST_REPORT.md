@@ -48,18 +48,20 @@ Tested in the connected Chrome browser on Windows, against the actual localhost 
 - Selected **Cancel R-202 & reopen the queue**, then ran again. The interface showed two pickups, one exception, one cancellation and revision 7. The cancelled notice was void in the database and excluded from the desk pack.
 - Selected **Reset demo** and observed a fresh synthetic queue before replay.
 - Reloaded the interface without resetting and observed persisted state.
-- Saved screenshots in `evidence/`. The download endpoint creates a Markdown file from the current register; its content was inspected through the generated CLI artifact. A browser file-download completion has not been independently verified.
+- Saved four JPEG screenshots in the locally prepared source archive's `evidence/` directory. The public GitHub repository currently includes the text evidence; those JPEG attachments have not been uploaded. The download endpoint creates a Markdown file from the current register; its content was inspected through the generated CLI artifact. A browser file-download completion has not been independently verified.
 
 ## Responsive layout
 
 `/layout-test` renders the real interface in same-origin frames sized at 360, 768 and 1280 CSS pixels. In this Windows browser, the frame's vertical scrollbar takes 15 pixels, giving content widths of 345, 753 and 1265 pixels respectively.
 
-At all three sizes, `documentElement.scrollWidth` equalled the content width. No measured main button, heading, request or panel crossed the content area's horizontal bounds. Primary, reset and cancellation buttons measured 51, 48 and 76 pixels high respectively. Screenshots record the actual layout. This checks responsive CSS in Chrome; it does not emulate mobile touch hardware, Safari or a different browser engine.
+At all three sizes, `documentElement.scrollWidth` equalled the content width. No measured main button, heading, request or panel crossed the content area's horizontal bounds. Primary, reset and cancellation buttons measured 51, 48 and 76 pixels high respectively. Locally saved screenshots record the actual layout. This checks responsive CSS in Chrome; it does not emulate mobile touch hardware, Safari or a different browser engine.
 
 Visible keyboard-focus styles, text labels for status, semantic buttons and a labelled inventory table are implemented. There is no animation or audio. The CSS includes reduced-motion overrides. Screen-reader walkthroughs, forced-colors mode, mobile touch gestures, automated contrast measurement and an OS reduced-motion toggle have not yet been tested. **No WCAG conformance claim is made.**
 
 ## Reproducibility and limits
 
 The lockfile pins dependency versions and distribution hashes. Model weights are not included. The tested Ollama model digest is recorded in README. Source is original and licensed MIT; the runtime dependencies retain their own licenses.
+
+The public repository was independently cloned at revision `1ffa675427f12fd8760cfb45a0681631b1540914`. All executable source matched the tested local source after line-ending normalization. JSON evidence matched after ignoring a final newline. All 12 domain tests also passed from that public clone in 0.732 seconds. The browser demo was then run directly from this clone, verifying initial allocation, unchanged revision 5 on repeat, and revision 7 after cancellation reassignment.
 
 Testing covers the seeded scenario and stated domain cases. No production library integration, public cloud deployment, large-load test, actual equipment inspection or field adoption study was performed. The local development server must remain bound to localhost.
