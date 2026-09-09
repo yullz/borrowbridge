@@ -1,0 +1,9 @@
+[project]
+name = "borrowbridge"
+version = "0.1.0"
+description = "A local Strands agent that prepares a community tool library's next shift."
+requires-python = ">=3.12,<3.13"
+dependencies = ["strands-agents[ollama]==1.55.0"]
+
+[tool.uv]
+package = false
