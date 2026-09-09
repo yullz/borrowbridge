@@ -1,0 +1,44 @@
+[
+  {
+    "phase": "initial",
+    "status": "passed",
+    "seconds": 9.75,
+    "tool_calls": 11,
+    "rejected_actions": 0,
+    "revision": 5,
+    "summary": {
+      "pending": 0,
+      "reserved": 2,
+      "attention": 2,
+      "cancelled": 0
+    }
+  },
+  {
+    "phase": "repeat",
+    "status": "passed",
+    "seconds": 9.91,
+    "tool_calls": 11,
+    "rejected_actions": 0,
+    "revision": 5,
+    "summary": {
+      "pending": 0,
+      "reserved": 2,
+      "attention": 2,
+      "cancelled": 0
+    }
+  },
+  {
+    "phase": "cancellation",
+    "status": "passed",
+    "seconds": 11.39,
+    "tool_calls": 13,
+    "rejected_actions": 2,
+    "revision": 7,
+    "summary": {
+      "pending": 0,
+      "reserved": 2,
+      "attention": 1,
+      "cancelled": 1
+    }
+  }
+]
