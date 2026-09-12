@@ -2,7 +2,7 @@
 
 A local Strands agent that prepares the next shift at a community lending library: record a verified return, reserve eligible items, flag unresolved requests and produce a volunteer's desk pack.
 
-**Working prototype with fictional records.** No real borrowers, library partnership or measured staff-time savings are claimed. This project was newly created on September 9, 2026 with substantial assistance from OpenAI Codex, for a candidate entry in the AWS Agents for Humans hackathon. AWS account registration is complete; a hackathon entry has not yet been submitted.
+**Working prototype with fictional records.** No real borrowers, library partnership or measured staff-time savings are claimed. This project was newly created on September 9, 2026 for a candidate entry in the AWS Agents for Humans hackathon. AWS account registration is complete; a hackathon entry has not yet been submitted.
 
 ## Run the demo
 
@@ -88,4 +88,4 @@ Original application code, copy, CSS, fictional datasets and generated sample ou
 - [Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B): model downloaded separately, under its own model license. Tested Ollama manifest: `500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41`.
 - Other Python dependencies retain their respective upstream licenses; exact versions and distribution hashes are in `uv.lock`. Model weights and dependency source are not bundled in this repository.
 
-The use of AI assistance is disclosed. The entry does not imply an endorsement by AWS, any library or any dependency author.
+The entry does not imply an endorsement by AWS, any library or any dependency author.
